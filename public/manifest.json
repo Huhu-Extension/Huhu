@@ -1,19 +1,14 @@
 {
-  "name": "Usage Indicator",
-  "description": "Basic system usage indicator for low level pc's",
+  "name": "Huhu Assistant",
+  "description": "Huhu artifical inteligence assistance for chrome extension.",
   "manifest_version": 2,
   "version": "1.0",
-  "permissions": [
-    "system.memory",
-    "system.cpu",
-    "storage",
-    "processes"
-  ],
+  "permissions": ["storage"],
   "matches": [
       "<all_urls>"
   ],
   "browser_action": {
       "default_popup": "index.html",
-      "default_title": "System Indicator"
+      "default_title": "Huhu Assistant"
   }
 }

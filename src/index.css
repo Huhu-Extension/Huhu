@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 *{
     padding: 0;
@@ -6,58 +6,99 @@
 }
 
 html{
-    height: 250px;
-    border: 6px solid #ec7922;
-    width: 200px;
+    height: 350px;
+    width: 300px;
 }
 
 body{
-    font-family: 'Bebas Neue', cursive;
+    padding: 1rem;
+    font-family: 'Rajdhani', sans-serif !important;
 }
 
-progress{
-    width: 100%;
-    height: 30px;
-    border: 2px solid #1D2228;
+.header {
+    display: grid;
+    grid-template-columns: auto auto;
+    border-bottom: 1px solid #1687a7;
+    color: #1687a7;
+    padding-bottom: 15px;
 }
 
-progress[value] {
-    -webkit-appearance: none;
-     appearance: none;
+.header .subject {
+    letter-spacing: 4px;
+    font-weight: 600;
+    font-size: 1.7rem;
 }
 
-progress::-webkit-progress-value{
-    background-color: #FB8122;
-    left: 5px;
+.header .message{
+    padding-left: 1rem;
+    font-size: 0.9rem;
 }
 
-h1{
+.container {
+    height: 235px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    font-size: 30px;
-    margin-top: 0%;
-    background-color:#ffb074
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #276678;
+    letter-spacing: 2px;
+    align-items: center;
+    border-bottom: 1px solid #1687a7;
 }
 
-a{
-    text-decoration: none;
+.container .lg{
+    font-size: 1.1rem;
 }
 
-h1 small{
-    font-size: 10px;
-    font-weight: 100;
-    margin-right: 10px;
+.container a{
+    border: 0px;
+    height: 45px;
+    margin-top: 10px;
+    width: 45px;
+    transition: 300ms;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.35); 
+    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.35);
+    border-radius: 100%;
 }
 
-label{
-    color: #1D2228;
-    font-size: 20px;
+.container a:hover{
+    transform: scale(1.1);
+    background-color: #d3e0ea;
 }
 
-small{
-    float: right;
+.container a img{
+    margin-top: 11px;
 }
 
-.col{
-    padding: 10px 10px 10px 10px;
-    margin-bottom: 15px;
+.speech-text{
+    font-size: 1.1rem;
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 200ms;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.footer {
+    padding-top: 10px;
+}
+
+.footer #github-icon{
+    margin-left: 10px;
+}
+
+.footer #paypal-icon{
+    margin-left: 10px;
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Indicator from './component/indicator/Indicator'
+import App from './app'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Indicator />
+    <App />
   </React.StrictMode>,
-  document.getElementById('indicator-section')
+  document.getElementById('root')
 );
