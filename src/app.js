@@ -1,11 +1,18 @@
 import { useState } from 'react'
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
 
 export default function App() {
 
+    const { transcript } = useSpeechRecognition()
     const [isListen,setIsListen] = useState(false)
 
     const onListen = () => {
         setIsListen(!isListen)
+        if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
+            return null
+        }
+        navigator.webkitGetUserMedia({ audio: true }, s => console.log(s), err => console.log(err))
+    
     }
 
     return (
@@ -21,7 +28,7 @@ export default function App() {
             <div className="container">
                 <div style={{display: !isListen ? "none" : "block"}}>
                     <p className="speech-text">
-                        Bismillahirrahmanirrahim
+                        {transcript ? transcript : "Bismillahirrahmanirrahim"} 
                     </p>
                 </div>
                 <div style={{display: isListen ? "none" : "block"}}>

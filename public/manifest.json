@@ -3,7 +3,9 @@
   "description": "Huhu artifical inteligence assistance for chrome extension.",
   "manifest_version": 2,
   "version": "1.0",
-  "permissions": ["storage"],
+  "permissions": [
+    "storage",
+    "audio"],
   "matches": [
       "<all_urls>"
   ],
